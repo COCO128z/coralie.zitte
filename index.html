@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Coralie Zitte</title>
+    <link rel="icon" type="image/png" href="sources/images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/euz8xsv.css">
+</head>
+<body>
+
+    <!-- 1. HEADER -->
+    <header class="header">
+        <nav class="nav-left">
+            <a href="index.html">accueil</a>
+            <a href="projets.html">projets</a>
+        </nav>
+
+        <div class="logo">
+            <a href="index.html">
+            <img src="sources/images/logo.png" alt="">
+            </a>
+        </div>
+
+
+        <nav class="nav-right">
+            <a href="infos.html">à propos</a>
+            <a href="contact.html">contact</a>
+        </nav>
+    </header>
+
+    <!-- 2. HERO -->
+    <section class="hero">
+        <div class="hero-image">
+            <img src="images/hero.jpg" alt="">
+        </div>
+
+        <div class="hero-text">
+            <h1>Ariv a zot !</h1>
+            <p>Graphiste polyvalente, j’accompagne des projets culturels et créatifs de la conception graphique, à la déclinaison sur des supports imprimés et numériques.
+Mon travail se situe à la croisée du graphisme, de la médiation et de la culture, mêlant rigueur graphique,
+sensibilité artistique et attention portée aux publics. Il vise à concevoir des univers visuels cohérents,
+accessibles et porteurs de sens.</p>
+            <a href="infos" class="btn">En savoir plus !</a>
+        </div>
+    </section>
+
+    <!-- 3. BANDEAU -->
+    <section class="slogan">
+        <p>✦ ti lamp ti lamp ✦ ti lamp ti lamp ✦ ti lamp ti lamp ✦</p>
+    </section>
+
+    <!-- 4. SERVICES -->
+    <section class="services">
+        <h1>derniers projets</h1>
+        <div class="service-card">
+            <div class="service-image">
+            <img src="sources/images/minicarteKZK.png" alt="">
+            </div>
+            <h3>Service 1</h3>
+            <a href="#" class="btn">voir plus</a>
+        </div>
+
+        <div class="service-card">
+            <h3>Service 2</h3>
+            <a href="#" class="btn">Let’s go</a>
+        </div>
+
+        <div class="service-card">
+            <h3>Service 3</h3>
+            <a href="#" class="btn">Let’s go</a>
+        </div>
+    </section>
+
+    <!-- 5. BLOG -->
+    <section class="blog">
+        <div class="blog-text">
+            <h2>On the blog…</h2>
+            <p>Un petit texte fun et humain.</p>
+            <a href="#" class="btn">Bloggie</a>
+        </div>
+
+        <div class="blog-image">
+            <img src="images/blog.jpg" alt="">
+        </div>
+    </section>
+
+    <!-- 6. FOOTER -->
+    <footer class="footer">
+        <p>Coralie Zitte © 2026💌</p>
+    </footer>
+
+<script>
+    let lastScrollY = window.scrollY;
+    const buttons = document.querySelectorAll('.btn');
+
+    window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > lastScrollY) {
+            // scroll vers le bas → anti-horaire
+            buttons.forEach(btn => {
+                btn.classList.add('rotate-down');
+                btn.classList.remove('rotate-up');
+            });
+        } else {
+            // scroll vers le haut → horaire
+            buttons.forEach(btn => {
+                btn.classList.add('rotate-up');
+                btn.classList.remove('rotate-down');
+            });
+        }
+
+        lastScrollY = currentScrollY;
+    });
+</script>
+
+
+
+</body>
+
+</html>
